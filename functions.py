@@ -1,17 +1,14 @@
+cart = []
 
-def send_loan_reminder(a, b):
-    msg = f'''
-    Dear {a},
+count = 0
+while count < 6:
+    choice = int(input('Enter 1 to add, 2 to remove: '))
+    if choice == 1:
+        product = input('Enter product to add:')
+        cart.append(product)
+    elif choice == 2:
+        product = input('Enter product to remove:')
+        cart.remove(product)
+    count+=1
 
-    Kindly clear your pending dues of Rs.{b}!
-
-    Thanks
-    HDFC 
-    '''
-    print(msg)
-names = {'Arun': 20000, 'veera':40000, 'Charan':25000, 'Praneeth':30000}
-for i in names: #i=Arun
-   name = i
-   amount = names[i]
-   send_loan_reminder(name, amount)
-   print('----------')
+print(cart)
