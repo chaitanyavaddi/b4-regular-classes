@@ -2,7 +2,7 @@ import os
 import time
 
 floors = 6
-requests = [3, 5, 1, 3]
+requests = [2, 5, 2]
 current_floor = 0
 
 def draw_lift(current):
